@@ -19,6 +19,21 @@ public class Tester {
             System.out.println(s);
         }
 
+        // // Equivalent code using an explicit iterator
+        //
+        // java.util.Iterator<String> it = sl1.iterator();
+        // while (it.hasNext())
+        // {
+        //     System.out.println(it.next());
+        // }
+            
+        // // Somewhat equivalent code using the get() method
+        //
+        // for (int i=0; i<sl1.size(); i++)
+        // {
+        //     System.out.println(sl1.get(i));
+        // }
+
 
         // Analyze the performance of the .add() method
 
