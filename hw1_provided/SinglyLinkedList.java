@@ -21,32 +21,25 @@ public class SinglyLinkedList<T> implements Iterable<T>{
 
     private int count;          // number of items in the list
     private Node head;          // pointer to dummy node at head of list
+    private Node tail;          // pointer to last node in the list, initially the head node
     
     public SinglyLinkedList()
     {
         head = new Node();      // dummy node
+        tail = head;
     }
 
 
     /**
      * Add a value to the end of the list
      * @param value the value to be added
-
-     *     This performs linearly with respect to the length of the list.
-     *     TOOD: Modify the list, and this method, to make this a constant
-     *     operation
+     * Performs in about the same time no matter the length of the list
     */
     void add(T value)
     {
-        Node curs=head;
-
-
-        while (curs.next != null)
-        {
-            curs=curs.next;
-        }
-
-        curs.next = new Node(value,null);
+        Node added  = new Node(value,null); 
+        tail.next   = added;
+        tail        = added;
         count++;
     }
     
